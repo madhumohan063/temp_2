@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps Directions with Traffic & Distance</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpYWXC4GR0aVyoK3x9Fg_Dg6x4BFSSdDg&callback=initMap" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      #map {
+        height: 70vh;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Find Route with Traffic, Distance, and Weather</h1>
+    <div id="map"></div>
+
+    <div>
+      <label>Destination: </label>
+      <input type="text" id="destination" placeholder="Enter destination">
+      <label>Mode of Travel: </label>
+      <select id="mode">
+        <option value="DRIVING">Driving</option>
+        <option value="BICYCLING">Bicycling</option>
+        <option value="WALKING">Walking</option>
+      </select>
+      <button onclick="calculateRoute()">Find Route</button>
+    </div>
+    
+    <p id="distance"></p>
+    <p id="duration"></p>
+    <p id="weather"></p> <!-- Display weather info -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
